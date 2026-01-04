@@ -9,13 +9,13 @@ Váš kód používá tři klíčové prvky pro organizaci dat a chování:
 
 ### A. Třída `Student` (`dataclass`)
 
-Proč dataclass? Zjednodušuje vytváření třídy, jejíž hlavní účel je držet data. Automaticky generuje metody jako` __init__ `, `__repr__` a `__eq__`.
+*Proč dataclass?* Zjednodušuje vytváření třídy, jejíž hlavní účel je držet data. Automaticky generuje metody jako` __init__ `, `__repr__` a `__eq__`.
 
-Validace (`__post_init__`): Tato speciální metoda se volá po inicializaci. Zajišťuje, že data, se kterými pracujeme, jsou vždy validní (např. jméno není prázdné a obor je správný Enum).
+**Validace (`__post_init__`):** Tato speciální metoda se volá po inicializaci. Zajišťuje, že data, se kterými pracujeme, jsou vždy validní (např. jméno není prázdné a obor je správný Enum).
 
-### B. `Enum` Obor
+### B. `Enum` `Obor`
 
-Proč `Enum`? Zajišťuje, že hodnota oboru bude vždy pocházet z definovaného seznamu (INFORMATIKA, MATEMATIKA...). Tím se vyhnete překlepům.
+*Proč `Enum`?* Zajišťuje, že hodnota oboru bude vždy pocházet z definovaného seznamu (INFORMATIKA, MATEMATIKA...). Tím se vyhnete překlepům.
 
 ### C. Globální stav modulu
 
@@ -28,7 +28,7 @@ Kód používá modulární (globální) stav držený v privátních proměnný
 
 Tento přístup s dvěma datovými strukturami je zvolen záměrně pro výkon.
 
-- Efektivní vyhledávání: Funkce `najdi_studenta_podle_rc(rc)` využívá slovník `_mapa_podle_rc`. Vyhledávání ve slovníku probíhá v průměrném čase O(1) (konstantní čas), což znamená, že rychlost vyhledání nezávisí na počtu studentů. 
+- **Efektivní vyhledávání**: Funkce `najdi_studenta_podle_rc(rc)` využívá slovník `_mapa_podle_rc`. Vyhledávání ve slovníku probíhá v průměrném čase O(1) (konstantní čas), což znamená, že rychlost vyhledání nezávisí na počtu studentů. 
 - Příklad `najdi_studenty_se_stejnym_jmenem`: Zde je vidět, jak slovník slouží k agregaci dat. Projdeme seznam jednou a vkládáme studenty do slovníku, kde klíčem je normalizované jméno.
 
 ---
