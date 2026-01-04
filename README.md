@@ -1,30 +1,30 @@
-#Rozbor kódu: Modul pro správu studentů
+# Rozbor kódu: Modul pro správu studentů
 
 Dnes se podíváme na řešení vaší úlohy, které demonstruje, jak v Pythonu efektivně spravovat a organizovat data. Tento kód je skvělým příkladem, jak modulární přístup a správné datové struktury (jako je slovník pro rychlé vyhledávání) vedou k přehlednému a výkonnému kódu.
 
 
-##1. Architektura a Datové struktury
+## 1. Architektura a Datové struktury
 
 Váš kód používá tři klíčové prvky pro organizaci dat a chování:
 
-###A. Třída `Student` (`dataclass`)
+### A. Třída `Student` (`dataclass`)
 
 Proč dataclass? Zjednodušuje vytváření třídy, jejíž hlavní účel je držet data. Automaticky generuje metody jako` __init__ `, `__repr__` a `__eq__`.
 
 Validace (`__post_init__`): Tato speciální metoda se volá po inicializaci. Zajišťuje, že data, se kterými pracujeme, jsou vždy validní (např. jméno není prázdné a obor je správný Enum).
 
-###B. `Enum` Obor
+### B. `Enum` Obor
 
 Proč `Enum`? Zajišťuje, že hodnota oboru bude vždy pocházet z definovaného seznamu (INFORMATIKA, MATEMATIKA...). Tím se vyhnete překlepům.
 
-###C. Globální stav modulu
+### C. Globální stav modulu
 
 Kód používá modulární (globální) stav držený v privátních proměnných:
   - `_studenti: List[Student]`: Seznam pro uchování všech studentů, užitečný pro iteraci.
   - `_mapa_podle_rc: Dict[str, Student]`: Slovník (hash mapa), kde klíčem je unikátní rodné číslo.
 
 
-##2. Optimalizace a Výkon
+## 2. Optimalizace a Výkon
 
 Tento přístup s dvěma datovými strukturami je zvolen záměrně pro výkon.
 
@@ -33,7 +33,7 @@ Tento přístup s dvěma datovými strukturami je zvolen záměrně pro výkon.
 
 ---
 
-##3. Úkol: Implementace a Testování
+## 3. Úkol: Implementace a Testování
 
 Cíl je pochopit a úspěšně spustit příklad použití:
 
