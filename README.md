@@ -42,6 +42,6 @@ Cíl je pochopit a úspěšně spustit příklad použití:
     - Jsou správně vypsáni studenti informatiky?
     - Byla správně nalezena duplicita jména *"Jan Novák"*?
     - Funguje vyhledávání podle RC (`najdi_studenta_podle_rc`)?
-3. *Bonus*: Zkuste implementovat novou funkci:
+3. Bonus: Zkuste implementovat novou funkci:
     - `pocet_studentu_dle_oboru() -> Dict[Obor, int]`: Funkce, která vrátí slovník, kde klíčem je Obor a hodnotou je počet studentů v daném oboru.
 4. **Commit**: Po dokončení a ověření funkčnosti nezapomeňte na git add, git commit a git push.
